@@ -1,13 +1,11 @@
 import { Portfolio } from "./portfolio.js";
-var portfolios = document.getElementById("portfolios");
 var btnQueryProfit = document.getElementById("query-profit");
 var portfolio = new Portfolio("First portfolio");
-var portfolioInformation = document.getElementById("stocks-number");
 renderPortfolio();
 btnQueryProfit.onclick = function () { return queryProfitAndReturn(); };
 function renderPortfolio() {
-    var portfolioInformation = document.getElementById("stocks-number");
-    portfolioInformation.innerHTML = "\n    <p class=\"h3\">".concat(portfolio.name, "</p>\n    <p><span class=\"font-weight-bold\">Stocks on this portfolio: </span>").concat(portfolio.stocks.length, "</p>\n    ");
+    var stocksNumber = document.getElementById("stocks-number");
+    stocksNumber.innerHTML = "\n    <p class=\"h3\">".concat(portfolio.name, "</p>\n    <p><span class=\"font-weight-bold\">Stocks on this portfolio: </span>").concat(portfolio.stocks.length, "</p>\n    ");
 }
 function queryProfitAndReturn() {
     var profitAndReturnInformation = document.getElementById("profit-and-return");

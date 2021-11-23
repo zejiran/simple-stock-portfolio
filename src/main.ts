@@ -1,16 +1,14 @@
 import { Portfolio } from "./portfolio.js";
 
-const portfolios: HTMLElement = document.getElementById("portfolios")!;
 const btnQueryProfit: HTMLElement = document.getElementById("query-profit")!;
 const portfolio: Portfolio = new Portfolio("First portfolio");
-const portfolioInformation: HTMLElement = document.getElementById("stocks-number")!;
 
 renderPortfolio();
 btnQueryProfit.onclick = () => queryProfitAndReturn();
 
 function renderPortfolio() {
-    const portfolioInformation: HTMLElement = document.getElementById("stocks-number")!;
-    portfolioInformation.innerHTML = `
+    const stocksNumber: HTMLElement = document.getElementById("stocks-number")!;
+    stocksNumber.innerHTML = `
     <p class="h3">${portfolio.name}</p>
     <p><span class="font-weight-bold">Stocks on this portfolio: </span>${portfolio.stocks.length}</p>
     `;

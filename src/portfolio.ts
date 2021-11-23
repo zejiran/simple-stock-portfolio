@@ -16,9 +16,7 @@ export class Portfolio {
 
     getProfit(initialDate: Date, finalDate: Date): number {
         let profit: number = 0;
-        if (finalDate < initialDate) {
-            // Final date must be greater than the initial date.
-        } else {
+        if (finalDate >= initialDate) {
             this.stocks.forEach((stock) => {
                 profit += stock.getPrice(finalDate) - stock.getPrice(initialDate);
             });
@@ -27,8 +25,8 @@ export class Portfolio {
     }
 
     getAnnualizedReturnBetweenDates(initialDate: Date, finalDate: Date): number {
+        // Final date must be greater than the initial date.
         if (finalDate < initialDate) {
-            // Final date must be greater than the initial date.
             return 0;
         }
         let initialPortfolioValue: number = 0;

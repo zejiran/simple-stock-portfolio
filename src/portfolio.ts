@@ -2,8 +2,10 @@ import { Stock } from "./stock.js";
 
 export class Portfolio {
     stocks: Stock[] = [];
+    name: string = "";
 
-    constructor() {
+    constructor(name: string) {
+        this.name = name;
         this.generateRandomStocks();
     }
 

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="./favicon.ico" rel="icon" type="image/png"/>
+    <title>Your Stock Portfolios</title>
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="container">
+    <div class="row justify-content-center m-5">
+        <img alt="Logo" src="../src/assets/logo.png">
+    </div>
+    <div class="row">
+        <div class="col">
+            <h1>Hello, Investor!</h1>
+            <img alt="Avatar" class="img-fluid"
+                 height="300px" src="https://joeschmoe.io/api/v1/investor" width="300px">
+            <div class="card p-5">
+                <h2>Here you can find your stock portfolios</h2>
+                <div class="card">
+                    <h4>Check your portfolio profit and annualized return by date</h4>
+                    <div class="row">
+                        <div class="col">
+                            <label for="date-start">Start date:</label>
+                            <input id="date-start" name="date-start" type="date">
+                        </div>
+                        <div class="col">
+                            <label for="date-end">End date:</label>
+                            <input id="date-end" name="date-end" type="date">
+                        </div>
+                        <div class="col">
+                            <button class="btn-light rounded" id="query-profit">Query</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="portfolios">
+                    <div id="portfolio">
+                        <div id="stocks-number"></div>
+                        <div id="profit-and-return"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="./../dist/main.js" type="module"></script>
+</body>
+
+</html>

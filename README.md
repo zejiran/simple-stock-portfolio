@@ -16,9 +16,10 @@ Simple representation of a stock portfolio.
 ## Features
 - Check the profit of a portfolio, with a collection of stocks, between two dates. This profit represents the annualized return of the portfolio. 
 - Query the price of each stock at a specific date.
+![Dashboard](https://user-images.githubusercontent.com/30379522/142981119-65e27dfd-a2d6-471a-ab8c-41103610b8a4.png)
 
 ## Usage
-1. Go to $WEBSITE for checking the functionality of project.
+1. Go to this [dashboard](https://zejiran.github.io/simple-stock-portfolio/public/index.html) for checking functionality of the project.
 
 ## License
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)

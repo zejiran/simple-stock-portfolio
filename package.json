@@ -10,7 +10,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "lint": "tslint --fix --project ./"
   },
   "repository": {
     "type": "git",

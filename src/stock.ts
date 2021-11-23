@@ -6,8 +6,8 @@ export class Stock {
     }
 
     generateRandomPriceHistory(): void {
-        const today = new Date();
-        const openingOfStock = new Date(1900, 0, 1);
+        const today: Date = new Date();
+        const openingOfStock: Date = new Date(1900, 0, 1);
         // Assign a price between 1 USD and 500 USD to each date in the stock price history.
         for (let d = openingOfStock; d <= today; d.setDate(d.getDate() + 1)) {
             this.priceHistory[d.toISOString().slice(0, 10)] = Math.floor(Math.random() * (500 - 1) + 1);
@@ -15,7 +15,7 @@ export class Stock {
     }
 
     getPrice(date: Date): number {
-        const today = new Date();
+        const today: Date = new Date();
         // Verify that the date exists in the stock price history.
         if (date >= today) {
             date = today;

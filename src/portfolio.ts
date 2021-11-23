@@ -23,4 +23,18 @@ export class Portfolio {
         }
         return profit;
     }
+
+    getAnnualizedReturnBetweenDates(initialDate: Date, finalDate: Date): number {
+        if (finalDate < initialDate) {
+            console.error("Final date must be later than the initial date");
+            return 0;
+        }
+        let initialPortfolioValue: number = 0;
+        let finalPortfolioValue: number = 0;
+        this.stocks.forEach((stock) => {
+            initialPortfolioValue += stock.getPrice(initialDate);
+            finalPortfolioValue += stock.getPrice(finalDate);
+        });
+        return ((finalPortfolioValue / initialPortfolioValue) - 1);
+    }
 }

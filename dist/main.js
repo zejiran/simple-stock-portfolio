@@ -7,13 +7,18 @@ renderPortfolio();
 btnQueryProfit.onclick = function () { return queryProfitAndReturn(); };
 function renderPortfolio() {
     var portfolioInformation = document.getElementById("stocks-number");
-    portfolioInformation.innerHTML = "\n    <h4 class=\"card-title\">".concat(portfolio.name, "</h4>\n    <p>Stocks on this portfolio: ").concat(portfolio.stocks.length, "</p>\n    ");
+    portfolioInformation.innerHTML = "\n    <p class=\"h3\">".concat(portfolio.name, "</p>\n    <p><span class=\"font-weight-bold\">Stocks on this portfolio: </span>").concat(portfolio.stocks.length, "</p>\n    ");
 }
 function queryProfitAndReturn() {
-    var startDateInput = document.getElementById("date-start");
-    var endDateInput = document.getElementById("date-end");
     var profitAndReturnInformation = document.getElementById("profit-and-return");
-    var initialDate = new Date(startDateInput.value);
-    var finalDate = new Date(endDateInput.value);
-    profitAndReturnInformation.innerHTML = "\n    <p>Profit: ".concat(portfolio.getProfit(initialDate, finalDate), " USD</p>\n    <p>Annualized return: ").concat((portfolio.getAnnualizedReturnBetweenDates(initialDate, finalDate) * 100).toFixed(2), "%</p>\n    ");
+    try {
+        var startDateInput = document.getElementById("date-start");
+        var endDateInput = document.getElementById("date-end");
+        var initialDate = new Date(startDateInput.value);
+        var finalDate = new Date(endDateInput.value);
+        profitAndReturnInformation.innerHTML = "\n            <p><span class=\"font-weight-bold\">Profit: </span>".concat(portfolio.getProfit(initialDate, finalDate), " USD</p>\n            <p><span class=\"font-weight-bold\">Annualized return: </span>").concat((portfolio.getAnnualizedReturnBetweenDates(initialDate, finalDate) * 100).toFixed(2), "%</p>\n        ");
+    }
+    catch (e) {
+        profitAndReturnInformation.innerHTML = "<p class=\"p-2 alert-danger\">Error: ".concat(e, "</p>");
+    }
 }

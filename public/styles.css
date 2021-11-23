@@ -1,0 +1,28 @@
+.query {
+    background-color: #D6E7FF;
+}
+
+#portfolios {
+    margin-top: 2%;
+}
+
+@media only screen and (max-width: 1190px) and (max-device-width: 1190px) {
+    #query-profit {
+        margin-top: 7%;
+    }
+}
+
+@media only screen and (max-width: 775px) and (max-device-width: 775px) {
+    #query-profit {
+        margin-top: 15%;
+        min-width: 4rem;
+    }
+
+    .query {
+        padding: 6% !important;
+    }
+
+    input[type=date] {
+        max-width: 4rem;
+    }
+}

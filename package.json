@@ -1,0 +1,19 @@
+{
+  "name": "simple-stock-portfolio",
+  "version": "1.0.0",
+  "description": "Representation of a simple stock portfolio",
+  "devDependencies": {
+    "typescript": "^4.5.2"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zejiran/simple-stock-portfolio.git"
+  },
+  "author": "zejiran",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zejiran/simple-stock-portfolio/issues"
+  },
+  "homepage": "https://github.com/zejiran/simple-stock-portfolio#readme"
+}

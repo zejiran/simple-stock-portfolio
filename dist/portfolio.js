@@ -14,7 +14,7 @@ var Portfolio = /** @class */ (function () {
     Portfolio.prototype.getProfit = function (initialDate, finalDate) {
         var profit = 0;
         if (finalDate < initialDate) {
-            console.error("Final date must be later than the initial date");
+            // Final date must be greater than the initial date.
         }
         else {
             this.stocks.forEach(function (stock) {
@@ -25,7 +25,7 @@ var Portfolio = /** @class */ (function () {
     };
     Portfolio.prototype.getAnnualizedReturnBetweenDates = function (initialDate, finalDate) {
         if (finalDate < initialDate) {
-            console.error("Final date must be later than the initial date");
+            // Final date must be greater than the initial date.
             return 0;
         }
         var initialPortfolioValue = 0;

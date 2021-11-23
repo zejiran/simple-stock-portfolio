@@ -19,8 +19,8 @@ function renderPortfolio() {
 function queryProfitAndReturn() {
     const profitAndReturnInformation: HTMLElement = document.getElementById("profit-and-return")!;
     try {
-        const startDateInput: HTMLInputElement = <HTMLInputElement>document.getElementById("date-start")!;
-        const endDateInput: HTMLInputElement = <HTMLInputElement>document.getElementById("date-end")!;
+        const startDateInput: HTMLInputElement = document.getElementById("date-start")! as HTMLInputElement;
+        const endDateInput: HTMLInputElement = document.getElementById("date-end")! as HTMLInputElement;
         const initialDate: Date = new Date(startDateInput.value);
         const finalDate: Date = new Date(endDateInput.value);
         profitAndReturnInformation.innerHTML = `

@@ -1,4 +1,4 @@
-import { Stock } from "./stock.js";
+import { Stock } from "./stock";
 
 export class Portfolio {
     stocks: Stock[] = [];
@@ -17,7 +17,7 @@ export class Portfolio {
     getProfit(initialDate: Date, finalDate: Date): number {
         let profit: number = 0;
         if (finalDate < initialDate) {
-            console.error("Final date must be later than the initial date");
+            // Final date must be greater than the initial date.
         } else {
             this.stocks.forEach((stock) => {
                 profit += stock.getPrice(finalDate) - stock.getPrice(initialDate);
@@ -28,7 +28,7 @@ export class Portfolio {
 
     getAnnualizedReturnBetweenDates(initialDate: Date, finalDate: Date): number {
         if (finalDate < initialDate) {
-            console.error("Final date must be later than the initial date");
+            // Final date must be greater than the initial date.
             return 0;
         }
         let initialPortfolioValue: number = 0;
